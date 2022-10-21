@@ -1,5 +1,5 @@
 <template>
-    <section id="app-example-app">
+    <section id="app-skeleton">
         <h5 class="mb-1">{{ $t("@app/skeleton-app.content.title") }}</h5>
         <div class="text-center">
             <b-spinner v-if="isLoading" class="mb-2" />
