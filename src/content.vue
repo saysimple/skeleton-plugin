@@ -1,6 +1,6 @@
 <template>
     <section id="app-skeleton">
-        <h5 class="mb-1">{{ $t("@app/skeleton-app.content.title") }}</h5>
+        <h5 class="mb-1">{{ $t("@app/skeleton.content.title") }}</h5>
         <div class="text-center">
             <b-spinner v-if="isLoading" class="mb-2" />
         </div>
@@ -38,11 +38,8 @@ export default {
         const loadData = async () => {
             isLoading.value = true;
 
-            // Pick a random page of vehicles available in SWAPI
-            const randomPage = randomNumber(3) + 1;
-
             await props.app.utils.apiCall({
-                    url: `https://swapi.dev/api/starships/?page=${randomPage}`,
+                    url: `https://swapi.dev/api/starships/?page=1`,
                     method: "GET",
                 },
             ).finally(() => isLoading.value = false);
