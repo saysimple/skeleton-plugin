@@ -9,7 +9,7 @@
 
 <script>
 import { BSpinner } from "bootstrap-vue";
-import { onBeforeMount, ref } from "@vue/composition-api";
+import { ref } from "@vue/composition-api";
 
 export default {
     components: {
@@ -29,23 +29,6 @@ export default {
     },
     setup(props) {
         const isLoading = ref(false);
-
-        const initSettings = () => {
-            loadData();
-        };
-
-        // https://swapi.dev/
-        const loadData = async () => {
-            isLoading.value = true;
-
-            await props.app.utils.apiCall({
-                    url: `https://swapi.dev/api/starships/?page=1`,
-                    method: "GET",
-                },
-            ).finally(() => isLoading.value = false);
-        };
-
-        onBeforeMount(initSettings);
 
         return {
             isLoading,
