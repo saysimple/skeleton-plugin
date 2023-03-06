@@ -38,11 +38,12 @@ export default {
         const loadData = async () => {
             isLoading.value = true;
 
-            await props.app.utils.apiCall({
+            await props.app.utils
+                .apiCall({
                     url: `https://swapi.dev/api/starships/?page=1`,
                     method: "GET",
-                },
-            ).finally(() => isLoading.value = false);
+                })
+                .finally(() => (isLoading.value = false));
         };
 
         onBeforeMount(initSettings);
@@ -54,5 +55,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
