@@ -7,11 +7,11 @@ import { locales } from "./locales";
 import { faIcons } from "./faIcons";
 import { icon } from "./icon";
 
-Vue.use(VueCompositionAPI);
-
 // Load package.json information
 // Note: Using pkg because package is a reserved keyword
-const pkg = require("../package.json");
+import pkg from "../package.json";
+
+Vue.use(VueCompositionAPI);
 
 const installers = new Map();
 

@@ -1,2 +1,1 @@
-export const faIcons = []
-
+export const faIcons = [];
