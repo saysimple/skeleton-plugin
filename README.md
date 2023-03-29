@@ -1,3 +1,3 @@
-# skeleton
+# Saysimple Skeleton plugin
 
-Saysimple App Skeleton
+See [Saysimple Plugin devkit](#todo-fill-in-when-devkit-is-public) For instalation and usage

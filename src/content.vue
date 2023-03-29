@@ -27,7 +27,7 @@ export default {
             },
         },
     },
-    setup(props) {
+    setup() {
         const isLoading = ref(false);
 
         return {
